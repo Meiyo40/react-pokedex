@@ -1,0 +1,16 @@
+.Pokegame,
+.Pokegame-team {
+    display: flex;
+    flex-direction: Column;
+    justify-content: center;
+}
+
+.Pokegame-power {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Pokegame-team {
+    flex-direction: row;
+}
