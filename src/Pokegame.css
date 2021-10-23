@@ -1,5 +1,5 @@
 .Pokegame,
-.Pokegame-team {
+.Pokegame-cards {
     display: flex;
     flex-direction: Column;
     justify-content: center;
@@ -11,6 +11,14 @@
     font-size: 20px;
 }
 
-.Pokegame-team {
+.Pokegame-cards {
     flex-direction: row;
+}
+
+.class-winner {
+    color: green;
+}
+
+.class-loser {
+    color: red;
 }

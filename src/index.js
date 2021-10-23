@@ -8,8 +8,7 @@ class App extends Component {
             <div>
                 <Pokedex />
 
-                <Pokegame team-id={1}/>                
-                <Pokegame team-id={2}/>
+                <Pokegame />    
             </div>
         )
     }
