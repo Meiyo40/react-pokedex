@@ -12,9 +12,9 @@ class Pokegame extends Component {
         let selectedIndex = [];
 
         while (selectedPokemons.length < 4) {
-            let rnd = Math.floor(Math.random() * Pokedex.defaultProps.length);
+            let rnd = Math.floor(Math.random() * Pokedex.defaultProps.pokemons.length);
             if(!selectedIndex.includes(rnd)) {
-                selectedPokemons.push(Pokedex.defaultProps[rnd]);
+                selectedPokemons.push(Pokedex.defaultProps.pokemons[rnd]);
                 selectedIndex.push(rnd);
             }
         }
@@ -32,14 +32,18 @@ class Pokegame extends Component {
         return (            
             <div className="Pokegame">
                 <div className="Pokegame-team">
-                    <p className="Pokegame-power"> Team Experience: { this.power.teamA } <span className={ WINNER === "A" ? "class-winner" : "class-loser" }>{ WINNER === "A" ? "WINNER" : "LOSER" }</span> </p>
+                    <p className="Pokegame-power"> Team Experience: { this.power.teamA } 
+                         <span className={ WINNER === "A" ? "class-winner" : "class-loser" }>{ WINNER === "A" ? " WINNER" : " LOSER" }</span> 
+                    </p>
                     <div className="Pokegame-cards">
                         { teamA.map( pokemon => <Pokecard data={pokemon} /> ) }
                     </div>
                 </div>
 
                 <div className="Pokegame-team">
-                    <p className="Pokegame-power"> Team Experience: { this.power.teamB } <span className={ WINNER === "B" ? "class-winner" : "class-loser" }>{ WINNER === "B" ? "WINNER" : "LOSER" }</span></p>
+                    <p className="Pokegame-power"> Team Experience: { this.power.teamB } 
+                        <span className={ WINNER === "B" ? "class-winner" : "class-loser" }>{ WINNER === "B" ? " WINNER" : " LOSER" }</span>
+                    </p>
                     <div className="Pokegame-cards">
                         { teamB.map( pokemon => <Pokecard data={pokemon} /> ) }
                     </div>

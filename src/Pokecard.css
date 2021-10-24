@@ -1,12 +1,30 @@
 .Pokecard {
     border: 1px solid white !important;
     border-radius: 10px;
-    background-color: rgb(65, 58, 58);
+    background-color: rgb(36, 34, 34);
     padding: 1rem;
     margin: 1rem;
     text-align: center;
+    width: 300px;
+    box-shadow: 5px 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 .Pokecard:hover {
     background-color: rgb(75, 73, 73);
+}
+
+.Pokecard-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: rgb(99, 94, 94);
+}
+
+.Pokecard img {
+    transition: all 0.5s;
+}
+
+.Pokecard img:hover {
+    transform: scale(1.20);
 }
